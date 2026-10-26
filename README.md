@@ -12,7 +12,7 @@ Static landing page for The Founder Glue Workshop (Wed 2 December 2026, The Dick
 
 ## Before it goes live (checklist)
 
-1. In `config.js`, set `BOOKING_URL` to the booking page address.
+1. `BOOKING_URL` in `config.js` is set to the GHL event page. Book buttons open it in a new tab.
 2. In `config.js`, set `PRIVACY_URL` to your privacy and cookie policy page.
 3. In `config.js`, add `META_PIXEL_ID`, `GA4_ID` and `CLARITY_ID`. Anything left empty simply does not load.
 4. In `index.html`, delete the `<meta name="robots" content="noindex, nofollow">` line when you want Google to list the page.

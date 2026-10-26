@@ -34,7 +34,11 @@
   var bookLinks = document.querySelectorAll(".js-book");
   var href = bookingHref();
   Array.prototype.forEach.call(bookLinks, function (a) {
-    if (href) a.setAttribute("href", href);
+    if (href) {
+      a.setAttribute("href", href);
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
+    }
     else if (a.getAttribute("href") === "#") a.setAttribute("href", "#book");
     a.addEventListener("click", function () {
       var where = a.getAttribute("data-where") || "unknown";

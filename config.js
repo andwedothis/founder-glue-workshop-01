@@ -4,7 +4,7 @@
 */
 window.FG_CONFIG = {
   // Where the "Book your seat" buttons go. Use the full https:// address of the booking page.
-  BOOKING_URL: "",
+  BOOKING_URL: "https://link.thesavvymarketingguy.com/events/founder-glue-workshop-dec26",
 
   // Link to your privacy and cookie policy page (opens in the same tab).
   PRIVACY_URL: "",
