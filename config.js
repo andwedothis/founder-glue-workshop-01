@@ -11,6 +11,6 @@ window.FG_CONFIG = {
 
   // Tracking IDs. Nothing loads until the visitor clicks "Accept".
   META_PIXEL_ID: "",   // numbers only, from Meta Events Manager
-  GA4_ID: "",          // looks like G-XXXXXXXXXX
+  GA4_ID: "G-F1X9W1Y369", // Google tag, loads only after Accept
   CLARITY_ID: ""       // the short project code from Microsoft Clarity
 };
