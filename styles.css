@@ -127,6 +127,18 @@ strong { color: var(--ink); }
 .section--navy h2, .section--navy h3, .section--navy strong { color: var(--white); }
 .lead { font-size: 1.2rem; }
 
+/* Problem and better way */
+.turn h2 { max-width: 20em; }
+.turn p { max-width: 38em; }
+.turn__line { font-family: var(--head); font-size: clamp(1.25rem, 3vw, 1.6rem); line-height: 1.3; margin: 2em 0 1.2em; }
+.turn__line strong { color: var(--sky); }
+.steps { list-style: none; margin: 0 0 2em; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; counter-reset: none; max-width: none; }
+.step { position: relative; background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.16); border-top: 4px solid var(--orange); border-radius: var(--radius); padding: 22px 22px 20px; min-width: 0; }
+.step h3 { font-size: clamp(1.5rem, 3vw, 1.9rem); font-weight: 800; color: var(--white); margin-bottom: 0.3em; }
+.step p { margin: 0; font-size: 1rem; color: #dbe6f3; }
+.turn__bridge { margin: 0; font-size: 1.1rem; color: var(--sky); font-weight: 600; max-width: none; }
+.turn .wrap.narrow { max-width: 900px; }
+
 /* Cards */
 .cards { list-style: none; margin: 1.6em 0 1.2em; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
 .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; min-width: 0; }
@@ -209,6 +221,7 @@ strong { color: var(--ink); }
   .facts { grid-template-columns: 1fr; }
   .two { grid-template-columns: 1fr; }
   .about { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
   .about__photo { max-width: 360px; }
   .brand img { height: 34px; }
   .timeline li { grid-template-columns: 3.6rem 1fr; padding-left: 16px; }
