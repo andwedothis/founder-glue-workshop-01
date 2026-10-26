@@ -16,6 +16,7 @@
 
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -40,7 +41,9 @@
 </head>
 <body>
 
-<header class="topbar">
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="topbar" id="topbar">
   <div class="wrap topbar__in">
     <a class="brand" href="#top" aria-label="The Savvy Marketing Guy">
       <img src="assets/logo-white.png" alt="The Savvy Marketing Guy" width="160" height="72">
@@ -53,10 +56,12 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
     <div class="wrap hero__in">
       <p class="eyebrow eyebrow--light">Wednesday 2 December 2026 &middot; Kelso</p>
       <h1>The Founder Glue Workshop</h1>
-      <p class="hero__tag">Map it. Price it. Fix it.</p>
+      <p class="hero__tag"><span>Map it.</span> <span>Price it.</span> <span>Fix it.</span></p>
       <p class="hero__lead">A pitch-free half day for solo founders who are the glue holding their business together. You leave with a map, a £ figure, an hours figure and one leak fixed.</p>
       <p class="hero__cta">
         <a class="btn btn--big js-book" href="#book" data-where="hero">Book your seat, £197</a>
@@ -75,7 +80,7 @@
   <section class="section">
     <div class="wrap narrow">
       <p class="eyebrow">The question</p>
-      <h2>If you vanished for 30 days, what would stop?</h2>
+      <h2>If you vanished for 30 days, <mark class="hl">what would stop?</mark></h2>
       <p>Most solo founders have a quick answer, and it is not a comfortable one.</p>
       <p>The follow-up only you send. The quote only you chase. The handover that lives in your head. It works because you make it work, right up until you are ill, on holiday, or just full.</p>
       <p>I call that <strong>Founder Glue</strong>. It is invisible, it feels normal, and it is costing you more than you think. This morning is about finding it, putting a price on it, and fixing the biggest bit.</p>
@@ -174,7 +179,9 @@
         <p>I have spent more than 25 years helping small business owners in the Scottish Borders and beyond make sense of websites, marketing systems and automation.</p>
         <p>I also spent more than 20 years in radio. Some of that was behind the mic, and a lot of it was in commercial production, writing and voicing thousands of radio commercials. It is where I learned to say something useful in 30 seconds, and I still try to.</p>
         <p>These days I help expert-led businesses stop relying on the owner's memory and build simple, connected systems that keep working when they are not in the room. The workshop is the practical, hands-on version of the first step: map before you build.</p>
-        <img class="about__sig" src="assets/signature.png" alt="Andrew's signature" width="640" height="277" loading="lazy">
+        <div class="sigwrap">
+          <img class="about__sig" src="assets/signature.png" alt="Andrew's signature" width="640" height="277" loading="lazy">
+        </div>
       </div>
       <figure class="about__photo">
         <img src="assets/andrew-mcewan.jpg" alt="Andrew McEwan, The Savvy Marketing Guy" width="900" height="800" loading="lazy">
@@ -259,5 +266,6 @@
 
 <script src="config.js"></script>
 <script src="script.js"></script>
+<script src="motion.js"></script>
 </body>
 </html>
