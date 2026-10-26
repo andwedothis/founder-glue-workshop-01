@@ -151,6 +151,7 @@ strong { color: var(--ink); }
 /* About */
 .about { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: clamp(28px, 6vw, 64px); align-items: center; }
 .about__text { min-width: 0; }
+.about__sig { display: block; width: 190px; max-width: 60%; height: auto; margin-top: 0.6em; }
 .about__photo { margin: 0; min-width: 0; }
 .about__photo img { display: block; width: 100%; height: auto; border-radius: 22px; box-shadow: 0 10px 28px rgba(18, 40, 74, 0.22); }
 .reg { font-size: 0.45em; font-weight: 700; vertical-align: super; line-height: 0; margin-left: 0.06em; }
