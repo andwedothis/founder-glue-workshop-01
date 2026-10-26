@@ -364,3 +364,14 @@ strong { color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   .journey__track::after, .jdot, .jlabel { transition: none !important; animation: none !important; }
 }
+
+/* Back to top */
+.totop { position: fixed; z-index: 60; right: max(18px, env(safe-area-inset-right, 0px)); bottom: calc(18px + env(safe-area-inset-bottom, 0px) + var(--consent-h, 0px));
+  width: 52px; height: 52px; padding: 0; border: 0; border-radius: 50%; background: var(--orange); color: #fff; cursor: pointer; display: grid; place-items: center;
+  box-shadow: 0 8px 22px rgba(27, 57, 93, 0.35);
+  transform: translateY(calc(100% + 70px + var(--consent-h, 0px) + env(safe-area-inset-bottom, 0px))); visibility: hidden;
+  transition: transform 0.5s ease, visibility 0s linear 0.5s, background-color 0.2s ease, bottom 0.3s ease; }
+.totop.show { transform: translateY(0); visibility: visible; transition: transform 0.5s ease, visibility 0s, background-color 0.2s ease, bottom 0.3s ease; }
+.totop:hover { background: var(--orange-dark); }
+.totop:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .totop, .totop.show { transition: none; } }

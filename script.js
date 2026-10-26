@@ -124,4 +124,35 @@
   var saved = getChoice();
   if (saved === "yes") loadTracking();
   else if (saved !== "no") showBanner();
+
+  /* ---------- 4. Back to top ---------- */
+  var toTop = document.getElementById("totop");
+  if (toTop) {
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var leaving = false;
+    function syncToTop() {
+      var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+      if (y < 150) leaving = false;
+      var on = y > 150 && !leaving;
+      toTop.classList.toggle("show", on);
+      toTop.tabIndex = on ? 0 : -1;
+    }
+    function syncOffset() {
+      var h = banner && !banner.hidden ? banner.offsetHeight : 0;
+      document.documentElement.style.setProperty("--consent-h", h + "px");
+    }
+    toTop.addEventListener("click", function () {
+      leaving = true;
+      toTop.classList.remove("show");
+      toTop.tabIndex = -1;
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+    window.addEventListener("scroll", syncToTop, { passive: true });
+    window.addEventListener("resize", syncOffset);
+    if (accept) accept.addEventListener("click", syncOffset);
+    if (reject) reject.addEventListener("click", syncOffset);
+    if (reopen) reopen.addEventListener("click", syncOffset);
+    syncToTop();
+    syncOffset();
+  }
 })();
