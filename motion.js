@@ -81,6 +81,7 @@
   add(".section h2");
   add(".section .narrow > p, .about__text > p, .two p, .book .lead, .book p:not(.eyebrow)", { stagger: 0.08 });
   add(".steps .step", { stagger: 0.18 });
+  add(".journey");
   add(".turn__line, .turn__bridge");
   add(".cards .card", { stagger: 0.12 });
   add(".ticks li", { stagger: 0.14 });
