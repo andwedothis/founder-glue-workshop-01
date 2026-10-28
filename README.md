@@ -20,7 +20,7 @@ Static landing page for The Founder Glue Workshop (Wed 2 December 2026, The Dick
 
 ## How tracking works
 
-Nothing loads until the visitor clicks "Accept" on the cookie banner. "No thanks" loads nothing. Their choice is remembered in the browser, and "Cookie settings" in the footer reopens the banner.
+The cookie banner and privacy links are removed for now, so Meta Pixel, GA4 and Clarity do NOT load. To switch tracking on, restore the banner (see the git history) first. "No thanks" loads nothing. Their choice is remembered in the browser, and "Cookie settings" in the footer reopens the banner.
 
 The "Book your seat" buttons pass any `utm_` or `fbclid` parameters on to the booking page, so a booking can be matched to its source link (LinkedIn DM, LinkedIn post, ally, Meta).
 

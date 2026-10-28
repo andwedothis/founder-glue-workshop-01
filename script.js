@@ -125,8 +125,10 @@
   });
   if (reopen) reopen.addEventListener("click", showBanner);
 
+  /* With no banner on the page, nothing is tracked. Put the banner back before switching tracking on. */
   var saved = getChoice();
-  if (saved === "yes") loadTracking();
+  if (!banner) { /* tracking stays off */ }
+  else if (saved === "yes") loadTracking();
   else if (saved !== "no") showBanner();
 
   /* ---------- 4. Back to top ---------- */
