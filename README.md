@@ -2,7 +2,7 @@
 
 Static landing page for The Founder Glue Workshop (Wed 2 December 2026, The Dickson Room, The Cross Keys Hotel, Kelso). Brand: The Savvy Marketing Guy. No build step, no dependencies.
 
-## Files
+## Files and things
 
 - `index.html` the page (copy lives here)
 - `styles.css` the look
