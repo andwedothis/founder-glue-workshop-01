@@ -7,6 +7,32 @@
   <!-- Termly consent banner and cookie blocker. Keep this as the FIRST script in the head. -->
   <script src="https://app.termly.io/resource-blocker/d3c11779-81ce-443d-a9fa-9b10ced072c4?autoBlock=on"></script>
 
+  <!-- Tracking. type="text/plain" keeps each one OFF until the visitor consents in the Termly banner. -->
+  <!-- Meta Pixel (advertising) -->
+  <script type="text/plain" data-categories="advertising">
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '477337859062541');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', { content_name: 'Founder Glue Workshop', value: 197, currency: 'GBP' });
+  </script>
+  <!-- Google tag, GA4 (analytics) -->
+  <script type="text/plain" data-categories="analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-F1X9W1Y369"></script>
+  <script type="text/plain" data-categories="analytics">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('set', 'linker', { domains: ['link.thesavvymarketingguy.com'] });
+    gtag('config', 'G-F1X9W1Y369');
+  </script>
+  <!-- Microsoft Clarity (analytics) -->
+  <script type="text/plain" data-categories="analytics">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "z7bq983e3b");
+  </script>
+
   <title>The Founder Glue Workshop | Map it. Price it. Fix it. | Kelso, 2 December 2026</title>
   <meta name="description" content="A pitch-free half-day workshop in Kelso for solo founders. Map your client journey, put a £ figure on what leaks, count your glue hours and fix one leak. Wednesday 2 December 2026.">
 
