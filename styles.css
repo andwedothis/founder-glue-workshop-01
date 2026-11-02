@@ -199,6 +199,7 @@ strong { color: var(--ink); }
 .footer { background: var(--navy-deep); color: #b9cbe0; font-size: 0.92rem; padding: 28px 0 calc(28px + env(safe-area-inset-bottom, 0px)); }
 .footer__in { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
 .footer p { margin: 0; }
+.footer__links { display: flex; flex-wrap: wrap; gap: 6px 18px; }
 .footer a, .linklike { color: #dbe6f3; }
 .linklike { background: none; border: 0; padding: 0; font: inherit; text-decoration: underline; cursor: pointer; }
 
